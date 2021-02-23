@@ -1,0 +1,11 @@
+.table-view{
+                   -fx-background-color: #ffffff;
+                }
+.table-view .column-header {
+    -fx-background-color: #ffffff;
+     -fx-border-style:bevel;
+   -fx-border-color: #355ECE;
+  -fx-border-width:3;
+-fx-font-weight:bolder;
+-fx-font-size: 14px
+}

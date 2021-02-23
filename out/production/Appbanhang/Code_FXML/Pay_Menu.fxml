@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="600.0" prefHeight="886.0" prefWidth="1305.0" style="-fx-background-color: #f5f5dc;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Code_FXML.Pay_Menu_Controller">
+   <children>
+      <TextField fx:id="txtsearch" layoutX="45.0" layoutY="9.0" prefHeight="30.0" prefWidth="427.0" promptText="Tìm kiếm sản phẩm" style="-fx-background-color: #ffffff;" styleClass="textfield">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></TextField>
+      <TableView fx:id="tvpay" layoutX="22.0" layoutY="53.0" prefHeight="819.0" prefWidth="842.0" stylesheets="@../css_style/custom_tbview.css">
+        <columns>
+          <TableColumn fx:id="tb_colstt" prefWidth="39.0" text="STT" />
+          <TableColumn fx:id="tb_colname" prefWidth="340.0" text="TÊN SẢN PHẨM" />
+            <TableColumn fx:id="tb_colcostalone" minWidth="9.0" prefWidth="173.0" text="ĐƠN GIÁ" />
+            <TableColumn fx:id="tb_colquantity" prefWidth="85.0" text="SỐ LƯỢNG" />
+            <TableColumn fx:id="tb_colcostsum" prefWidth="204.0" text="THÀNH TIỀN" />
+        </columns>
+         <styleClass>
+            <String fx:value="column-header-background" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+      <ListView fx:id="listproduct" layoutX="14.0" layoutY="39.0" prefHeight="102.0" prefWidth="459.0" />
+      <AnchorPane fx:id="pane2" layoutX="872.0" layoutY="55.0" prefHeight="819.0" prefWidth="413.0" style="-fx-background-color: #87cefa;">
+         <children>
+            <TextField fx:id="txtsearch2" layoutX="52.0" layoutY="49.0" prefHeight="30.0" prefWidth="346.0" promptText="Tìm thành viên" style="-fx-background-color: #ffffff;" styleClass="textfield" stylesheets="@../css_style/custom.css">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextField>
+            <AnchorPane prefHeight="43.0" prefWidth="419.0" style="-fx-background-color: #ffff00;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="28.0" layoutX="377.0" layoutY="7.0">
+                     <image>
+                        <Image url="@../Image/icons8-home-64.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnadd" layoutX="26.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#princeInvoice" prefHeight="25.0" prefWidth="138.0" style="-fx-background-radius: 0; -fx-background-color: #6495ed;" text="Đăng ký thành viên">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="454.0" prefHeight="366.0" prefWidth="419.0" style="-fx-background-color: #ffdab9;">
+               <children>
+                  <Button fx:id="btnpay" layoutX="141.0" layoutY="300.0" mnemonicParsing="false" onMouseClicked="#princeInvoice" prefHeight="52.0" prefWidth="138.0" styleClass="buttonthanhtoan" stylesheets="@../css_style/custom.css" text="THANH TOÁN" />
+               </children>
+            </AnchorPane>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="590.0" prefHeight="33.0" prefWidth="116.0" stylesheets="@../css_style/custom.css" text="Tổng tiền: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="11.0" layoutY="684.0" prefHeight="33.0" prefWidth="116.0" stylesheets="@../css_style/custom.css" text="Trả lại:">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtmoneytake" alignment="CENTER" layoutX="150.0" layoutY="637.0" prefHeight="33.0" prefWidth="199.0" style="-fx-background-color: #ffffff;" />
+            <Label alignment="CENTER" layoutX="342.0" layoutY="637.0" prefHeight="33.0" prefWidth="44.0" style="-fx-background-color: #ffffff;" text="VND" />
+            <Label fx:id="lbmoneygive" alignment="CENTER" layoutX="150.0" layoutY="684.0" prefHeight="33.0" prefWidth="199.0" style="-fx-background-color: #ffffff;" />
+            <Label alignment="CENTER" layoutX="342.0" layoutY="684.0" prefHeight="33.0" prefWidth="44.0" style="-fx-background-color: #ffffff;" text="VND" />
+            <Label alignment="CENTER" layoutX="11.0" layoutY="637.0" prefHeight="33.0" prefWidth="116.0" stylesheets="@../css_style/custom.css" text="Tiền khách đưa: ">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbsummoney" alignment="CENTER" layoutX="150.0" layoutY="590.0" prefHeight="33.0" prefWidth="236.0" style="-fx-background-color: #ffffff;" text="0" />
+            <Label alignment="CENTER" layoutX="342.0" layoutY="590.0" prefHeight="33.0" prefWidth="44.0" style="-fx-background-color: #ffffff;" text="VND" />
+            <AnchorPane layoutX="21.0" layoutY="49.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1.0" layoutY="-1.0">
+                     <image>
+                        <Image url="@../Image/search.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="25.0" layoutY="269.0" prefHeight="176.0" prefWidth="369.0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <ListView fx:id="lvcustomer" layoutX="20.0" layoutY="79.0" prefHeight="157.0" prefWidth="379.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="9.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1.0" layoutY="-1.0">
+               <image>
+                  <Image url="@../Image/search.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

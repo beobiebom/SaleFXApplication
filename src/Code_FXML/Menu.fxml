@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="416.0" prefWidth="618.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Code_FXML.MenuController">
+   <children>
+      <ImageView fx:id="imgpay" fitHeight="105.0" fitWidth="105.0" layoutX="52.0" layoutY="174.0" onMouseClicked="#handleimgaction">
+         <image>
+            <Image url="@../Image/pay_menu.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgcustomer" fitHeight="105.0" fitWidth="105.0" layoutX="244.0" layoutY="174.0">
+         <image>
+            <Image url="@../Image/customer_menu.png" />
+      </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="52.0" layoutY="43.0" prefHeight="27.0" prefWidth="137.0" style="-fx-background-color: #a52a2a;" text="Tên nhân viên:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5952380952380952" endY="0.8666666666666667">
+               <stops>
+                  <Stop color="#272580" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label layoutX="-350.0" layoutY="-155.0" text="Label" />
+      <Label alignment="CENTER" layoutX="52.0" layoutY="97.0" prefHeight="27.0" prefWidth="137.0" style="-fx-background-color: #a52a2a;" text="Số điện thoại:">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.5952380952380952" endY="0.8666666666666667">
+               <stops>
+                  <Stop color="#242997" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="lbname" layoutX="205.0" layoutY="43.0" prefHeight="27.0" prefWidth="227.0">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lbphone" layoutX="205.0" layoutY="97.0" prefHeight="27.0" prefWidth="227.0">
+         <font>
+            <Font name="System Italic" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
